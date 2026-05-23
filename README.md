@@ -220,3 +220,4 @@ ISC
 ## Version
 
 v1.0.0
+Built and managed with VS Code and GitHub. 
