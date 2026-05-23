@@ -1,0 +1,24 @@
+{
+  "name": "safenest",
+  "version": "1.0.0",
+  "description": "SafeNest - Shipping and asset management platform",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "set-password": "node set-admin-password.js"
+  },
+  "keywords": [
+    "shipping",
+    "assets",
+    "management",
+    "safenest"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {}
+}

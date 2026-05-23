@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Data files (sensitive)
+safenest-data/admin-password.json
+safenest-data/orders.json
+safenest-data/assets.json
+safenest-data/contacts.json
+safenest-data/chats.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build
+dist/
+build/
+.cache/
+
+# Logs
+logs/
+*.log

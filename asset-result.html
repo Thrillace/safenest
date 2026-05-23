@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeNest Asset Tracking Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="asset-result-page">
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">SafeNest<span>Metals</span></a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html#tracking">Track Another Asset</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="asset-result-shell">
+        <section class="asset-result-hero">
+            <div class="container">
+                <div class="asset-result-heading">
+                    <span class="admin-kicker">Verified Custody Record</span>
+                    <h1>Asset Tracking Details</h1>
+                    <p>Secure custody information is shown only after a valid tracking number, client ID, and access code are confirmed.</p>
+                </div>
+                <div id="assetResultContent" class="asset-result-content"></div>
+                <div class="asset-result-actions">
+                    <a href="index.html#tracking" class="btn">Track Another Asset</a>
+                    <a href="index.html#contact" class="btn btn-outline">Contact Support</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="live-chat-btn" id="liveChatBtn" type="button" aria-label="Open asset chat" hidden>
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <script src="asset-result.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeNest Admin | Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page admin-locked">
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">SafeNest<span>Metals</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html#home" target="_blank" rel="noopener">Site</a></li>
+                    <li class="admin-private"><a href="admin.html">Dashboard</a></li>
+                    <li class="admin-private"><a href="admin-orders.html">Orders</a></li>
+                    <li class="admin-private"><a href="admin-assets.html">Assets</a></li>
+                    <li class="admin-private"><a href="admin-messages.html">Messages</a></li>
+                    <li class="admin-private"><a href="admin-chat.html">Live Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-shell">
+        <section class="admin-hero">
+            <div class="container admin-hero-grid">
+                <div>
+                    <span class="admin-kicker">Operations Control</span>
+                    <h1>Admin Dashboard</h1>
+                    <p>Open each admin workspace separately and manage SafeNest operations without one long page.</p>
+                </div>
+                <div class="admin-login" id="adminLogin">
+                    <h2>Admin Access</h2>
+                    <p>Enter your admin username and password to open the dashboard.</p>
+                    <form id="adminLoginForm">
+                        <div class="form-group"><label for="adminUsername">Username</label><input type="text" id="adminUsername" autocomplete="username" required></div>
+                        <div class="form-group"><label for="adminPasscode">Password</label><input type="password" id="adminPasscode" required></div>
+                        <button type="submit" class="btn">Open Dashboard</button>
+                        <div class="admin-alert" id="loginStatus"></div>
+                    </form>
+                </div>
+                <div class="admin-login is-unlocked" id="adminUnlocked" hidden>
+                    <h2>Admin Session</h2>
+                    <p>Your admin session is active across all admin pages.</p>
+                    <div class="admin-session-actions">
+                        <button type="button" class="btn btn-outline" id="lockAdminBtn">Lock Dashboard</button>
+                        <button type="button" class="admin-text-link" id="openPasswordForm">Change Password</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-section admin-private">
+            <div class="container">
+                <div class="admin-stat-grid">
+                    <div class="admin-stat"><span>Total Orders</span><strong id="totalOrders">0</strong></div>
+                    <div class="admin-stat"><span>In Transit</span><strong id="inTransitOrders">0</strong></div>
+                    <div class="admin-stat"><span>Delivered</span><strong id="deliveredOrders">0</strong></div>
+                    <div class="admin-stat"><span>High Priority</span><strong id="priorityOrders">0</strong></div>
+                    <div class="admin-stat"><span>Tracked Assets</span><strong id="totalAssets">0</strong></div>
+                    <div class="admin-stat"><span>Contact Messages</span><strong id="totalContacts">0</strong></div>
+                    <div class="admin-stat"><span>Unread Chats</span><strong id="unreadChats">0</strong></div>
+                </div>
+                <div class="admin-page-links">
+                    <a class="admin-page-link" href="admin-orders.html"><i class="fas fa-box"></i><strong>Orders</strong><span>Create and update shipment records.</span></a>
+                    <a class="admin-page-link" href="admin-assets.html"><i class="fas fa-vault"></i><strong>Assets</strong><span>Manage asset tracking credentials.</span></a>
+                    <a class="admin-page-link" href="admin-messages.html"><i class="fas fa-envelope"></i><strong>Messages</strong><span>Read contact form submissions.</span></a>
+                    <a class="admin-page-link" href="admin-chat.html"><i class="fas fa-comments"></i><strong>Live Chat</strong><span>Reply to verified asset clients.</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="admin-password-modal" id="passwordModal" hidden>
+        <div class="admin-password-dialog">
+            <button type="button" class="close-modal" id="closePasswordForm">&times;</button>
+            <h2>Change Admin Password</h2>
+            <p>Confirm your current admin details before setting a new password.</p>
+            <form id="passwordForm" class="admin-password-form">
+                <div class="form-group"><label for="currentUsername">Current Username</label><input type="text" id="currentUsername" autocomplete="username" required></div>
+                <div class="form-group"><label for="currentPassword">Current Password</label><input type="password" id="currentPassword" autocomplete="current-password" required></div>
+                <div class="form-group"><label for="newPassword">New Password</label><input type="password" id="newPassword" autocomplete="new-password" minlength="8" required></div>
+                <button type="submit" class="btn">Update Password</button>
+                <div class="admin-alert" id="passwordStatus"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
