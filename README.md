@@ -1,5 +1,5 @@
-# SafeNest - Shipping & Asset Management Platform
-
+# SafeNest
+My project hosted on Github.
 A comprehensive web application for managing shipments, assets, customer communications, and administrative functions.
 
 ## Features
